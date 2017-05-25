@@ -11,7 +11,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     // Open a WebSocket connection
     //var ws = $websocket("ws://localhost:1337" + document.location.host +
        // document.location.pathname + "atpendpoint");
-    var ws = $websocket("ws://46.101.190.180:1337");
+    var ws = $websocket("wss://46.101.190.180:1337");
 
     var received = null;
     ws.onMessage(function (event) {
