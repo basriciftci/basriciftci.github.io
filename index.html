@@ -6,14 +6,117 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ECE 520 Term Project</title>
+  <title>ECE 520 Final Project</title>
   <meta name="description" content="">
-  </head>
-<body >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/angular-websocket.js"></script>
+  <script src="js/app.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <style>
+    table, th,td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,td{
+      padding:5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body ng-controller="mainCtrl" style="background-color: lightgray;">
+<br><br>
+<div class="container">
+<div class="jumbotron text-center">
+  <h2>Next Word Prediction and <br> Auto-completion of Turkish Words using Char-RNN</h2>
+  <h5>Istanbul Sehir University, ECE 520 Final Project</h5>
+  <h5>Basri Çiftçi, Ömer Faruk Turgut</h5>
+</div>
 
-<div >
+  <div class="jumbotron">
+    <p style="font-size: 15px;">
+      Machine Learning itself is a subfield of Artificial Ingellince. Our modern world is witnessing new technologies every day,
+      which are mostly to make our daily actions and works much more easier. Natural Language Processing is one of the those fields
+      in Machine Learning which is in great demand nowadays. There are numerous application like online translation, text summarization in NLP studies.
+      Especially after new techniques and algorithms have been developed in the field of deep learning, big companies have made some major improvements in this field as well.
+      But the vast majority of studies are in widely spoken languages such as English. For languages like Turkish we
+      have seen the lack of studies. So with my friend, we tried to develop an application for Turkish language.
+    </p>
+    <p style="font-size: 15px;">
+      The main motivation and purpose behind this project is to have better features for a smartphone
+      keyboard, especially for Turkish language. There are some fundamental features of a smartphone
+      keyboard, like auto-correction, spell-checking, auto-completion and next-word-prediction when you type on texts. In this study
+      we worked on only next-word-prediction and auto-completion of a Turkish word.
+    </p>
+    <p style="font-size: 15px;"> The following tables shows the results of our application for both features</p>
+   <center>
+     <table border="1" style="width: 520px;">
+       <tr>
+         <th>Partly-Entered Words</th>
+         <th>Auto-completion Results</th>
+       </tr>
+       <tr>
+         <td>s</td>
+         <td>sz, satarken, sizlikleri</td>
+       </tr>
+       <tr>
+         <td>al</td>
+         <td>alınca, alışların, alışnış</td>
+       </tr>
+       <tr>
+         <td>geli</td>
+         <td>gelirsiniz, gelir, gelirler</td>
+       </tr>
+     </table>
+     <br>
+     <table border="1" style="width: 520px; padding: 10px;">
+       <tr>
+         <th>Full Words</th>
+         <th>Next Word Prediction Results</th>
+       </tr>
+       <tr>
+         <td>Sen</td>
+         <td>Sen bu; Sen söyledi, Sen de</td>
+       </tr>
+       <tr>
+         <td>Bende</td>
+         <td>Bende yapılmış, Bende Unutulur. Bende olduğunu</td>
+       </tr>
+       <tr>
+         <td>Sonra</td>
+         <td>Sonra aslında, Sonra Hegalonda, Sonra yakışmayış</td>
+       </tr>
+     </table>
 
-  <iframe src="http://46.101.190.180/angular/" ></iframe>
+   </center>
+
+    <br>
+    <p style="font-size: 15px;">If we come to more technical details, for fanciers, we have used TensorFlow libraries and used python language. The whole code can be tracked in <a href="code.html">this page</a> </p>
+    <div class="col-md-6 text-center">
+      <p style="font-size: 15px;">
+        Basri ÇİFTÇİ<br>
+        basriciftci@std.sehir.edu.tr
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <p style="font-size: 15px;">
+        Ömer Faruk Turgut<br>
+        farukturgut@std.sehir.edu.tr
+      </p>
+    </div>
+
+  </div>
+
+
+  <!--p class="bg-info">Auto-completion and Next-word Prediction for Turkish words</p>
+  <textarea style="height: 100px; max-height: 100px;" ng-model="command"></textarea>
+  <button class="btn btn-info" ng-click="doIt()">Auto Complete</button>
+  <textarea style="height: 100px; max-height: 100px;" id="value"></textarea-->
+
 
 </div>
 
